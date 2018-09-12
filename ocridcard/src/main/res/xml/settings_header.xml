@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="@string/default_exposure_value"
+        android:entries="@array/exposure_entries"
+        android:entryValues="@array/exposure_value"
+        android:key="key_exposure_value"
+        android:title="@string/exposure_config">
+
+    </ListPreference>
+    <ListPreference
+        android:defaultValue="@string/default_pixel_size"
+        android:entries="@array/pixel_size_entries"
+        android:entryValues="@array/pixel_size_value"
+        android:key="key_pixel_value"
+        android:title="@string/pixel_config">
+
+    </ListPreference>
+    <ListPreference
+        android:defaultValue="@string/default_scan_mode"
+        android:entries="@array/scan_mode_entries"
+        android:entryValues="@array/scan_mode_value"
+        android:key="key_scan_mode_value"
+        android:title="@string/scan_mode_config">
+
+    </ListPreference>
+    <SwitchPreference
+        android:defaultValue="@bool/default_scan_effect"
+        android:key="key_front_scan_effect_value"
+        android:title="@string/front_scan_effect">
+    </SwitchPreference>
+
+    <SwitchPreference
+        android:defaultValue="@bool/default_scan_effect"
+        android:key="key_back_scan_effect_value"
+        android:title="@string/back_scan_effect">
+    </SwitchPreference>
+    <CheckBoxPreference
+        android:defaultValue="@bool/default_focus_forever"
+        android:key="key_focus_forever_value"
+        android:title="@string/focus_forever">
+
+    </CheckBoxPreference>
+    <ListPreference
+        android:defaultValue="@string/default_focus_mode"
+        android:entries="@array/focus_mode_entries"
+        android:entryValues="@array/focus_mode_value"
+        android:key="key_focus_mode_value"
+        android:title="@string/focus_mode_config">
+
+    </ListPreference>
+    <MultiSelectListPreference
+        android:defaultValue="@array/default_scan_lib_value"
+        android:entries="@array/scan_lib_entries"
+        android:entryValues="@array/scan_lib_value"
+        android:key="key_scan_lib_value"
+        android:title="@string/scan_lib_config">
+
+    </MultiSelectListPreference>
+    <CheckBoxPreference
+        android:defaultValue="@bool/default_save_preview"
+        android:key="key_save_preview"
+        android:title="@string/save_preview_config">
+
+    </CheckBoxPreference>
+
+    <ListPreference
+        android:defaultValue="@string/default_fixed_focus_mode"
+        android:entries="@array/fixed_focus_mode"
+        android:entryValues="@array/fixed_focus_value"
+        android:key="key_fixed_focus_value"
+        android:title="@string/fixed_focus_mode_config">
+
+    </ListPreference>
+    <ListPreference
+        android:defaultValue="@string/default_focus_interval"
+        android:entries="@array/focus_interval"
+        android:entryValues="@array/focus_interval_value"
+        android:key="key_auto_focus_interval"
+        android:title="@string/auto_focus_interval">
+
+    </ListPreference>
+</PreferenceScreen>

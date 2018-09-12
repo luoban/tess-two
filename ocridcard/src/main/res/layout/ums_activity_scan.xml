@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/capture_containter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.centerm.dev.barcode.camera.CameraView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true" />
+
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#004684">
+
+        <ImageView
+            android:id="@+id/backpress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:src="@drawable/ums_ic_back" />
+
+        <ImageView
+            android:id="@+id/switch_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingRight="8dp"
+            android:src="@drawable/ums_ic_switch" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/top_mask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/scan_mask"
+        android:contentDescription="@string/app_name" />
+
+    <RelativeLayout
+        android:id="@+id/capture_crop_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_mask"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ums_capture"
+        android:contentDescription="@string/app_name">
+
+        <ImageView
+            android:id="@+id/capture_scan_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ums_scan_line"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bottom_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/capture_crop_layout"
+        android:background="@drawable/scan_mask"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/left_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_mask"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/top_mask"
+        android:layout_toLeftOf="@id/capture_crop_layout"
+        android:background="@drawable/scan_mask"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/right_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_mask"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/top_mask"
+        android:layout_toRightOf="@id/capture_crop_layout"
+        android:background="@drawable/scan_mask"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/capture_crop_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/scan_tips"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/flash_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/capture_crop_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:drawableTop="@drawable/shandian"
+        android:visibility="visible"
+        android:text="@string/tap_flashlight"
+        android:textColor="@color/white" />
+    <LinearLayout
+        android:id="@+id/front_mask_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="16dp"
+        >
+
+        <ImageView
+            android:id="@+id/front_mask"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:src="@drawable/ums_k9_front"
+            android:layout_margin="16dp"
+            android:layout_height="0dp" />
+        <TextView
+            android:layout_marginTop="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:lineSpacingExtra="9dp"
+            android:text="@string/ums_follow_tip"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:lineSpacingExtra="9dp"
+            android:textStyle="italic"
+            android:text="@string/ums_tips"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

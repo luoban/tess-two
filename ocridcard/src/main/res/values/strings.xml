@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Barcode</string>
+    <string name="scan_tips">Align 2D/1D Barcode to the box\nyou can automatically scan</string>
+    <string name="exposure_config">Exposure settings</string>
+    <string name="scan_lib_config">Scan library</string>
+    <string name="scan_mode_config">Scan mode</string>
+    <string name="focus_mode_config">Focus mode</string>
+    <string name="focus_forever">Infinity focus</string>
+    <string name="front_scan_effect">Front camera scan effect</string>
+    <string name="back_scan_effect">Back camera scan effect</string>
+    <string name="pixel_config">Image size</string>
+    <string name="save_preview_config">Save preview(ForDebug)</string>
+    <string name="fixed_focus_mode_config">Fixed focal length</string>
+    <string name="ums_follow_tip">Please follow the icon</string>
+    <string name="ums_tips">1, 2D/1D Barcode alignment POS front camera 10cm above the scanning code \n2, click the upper right corner to switch the POS rear camera scanning code</string>
+    <string name="auto_focus_interval">Infinity focus interval</string>
+    <string name="tap_flashlight">Tap to lit up</string>
+    <string name="tap_close_flashlight">Off</string>
+    <string name="flashlight_on">On </string>
+</resources>

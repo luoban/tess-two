@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">سىزىقلىق كود سكاننېرلاش</string>
+    <string name="scan_tips">ئىككى ئۆلچەملىك كود / نومۇرنى توغرىلاپ بېرىپ رامكىسى ئىچىدە ، قويسىڭىزلا ئاپتوماتىك سىكانېرلايدۇ </string>
+    <string name="exposure_config">يورۇتۇش تەسىس قىلىش </string>
+    <string name="scan_lib_config">كودنى سكاننېرلىغان ئامبىرى</string>
+    <string name="scan_mode_config">كودنى سكاننېرلىغان ئەندىزىسى </string>
+    <string name="focus_mode_config">فوكۇس نۇقتىسى ئەندىزىسى </string>
+    <string name="focus_forever">چەكسىز فوكۇس تەڭشەش </string>
+    <string name="front_scan_effect">ئالدىنقى كودنى سكاننېرلىغان ئۈنۈمى</string>
+    <string name="back_scan_effect">كودنى سكاننېرلىغان كېيىن تەسىس قىلىنغان ئۈنۈمى </string>
+    <string name="pixel_config">سۈرەت چوڭ - كىچىكلىكى</string>
+    <string name="save_preview_config">كۆرۈش ساقلاش ( تەڭشەش )</string>
+    <string name="fixed_focus_mode_config">مۇقىم فوكۇس ئارىلىقى</string>
+    <string name="ums_follow_tip">رەسىملىك ) سخېمىلىق ( كۆرسەتمە بويىچە مەشغۇلات </string>
+    <string name="ums_tips">1.ئىككىلىك كود / نومۇرنى POS توغرىلاپ ئالدىغا ئورنىتىلغان كامېرا ئۈستىدىكى cm 10 كودنى سكاننېرلىغان ئېلىپ بېرىش 2، ئوڭ تەرەپ ئۈستى بۇرجىكىدىكى چېكىپ ئالماشتۇرۇش بولىدۇ POS ئارقىغا ئورنىتىلغان كامېرا كودنى سكاننېرلىغان ئېلىپ بېرىش</string>
+    <string name="auto_focus_interval">چەكسىز فوكۇس ئارىلىقى</string>
+    <string name="tap_flashlight">يېنىك پارلىدى ،</string>
+    <string name="tap_close_flashlight">ئەتمەك</string>
+    <string name="flashlight_on">ئېچىش </string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_exposure_value">2</string>
+    <string-array name="exposure_entries">
+        <item>最小</item>
+        <item>最大</item>
+        <item>自动</item>
+    </string-array>
+    <string-array name="exposure_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="scan_lib_entries">
+        <item>扫码库1</item>
+        <item>扫码库2</item>
+        <item>扫码库3</item>
+        <item>扫码库4</item>
+    </string-array>
+    <string-array name="scan_lib_value">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="default_scan_lib_value">
+        <item>1</item>
+        <item>8</item>
+    </string-array>
+    <string name="default_scan_mode">2</string>
+    <string-array name="scan_mode_entries">
+        <item>快速</item>
+        <item>高精度</item>
+    </string-array>
+    <string name="default_pixel_size">640x480</string>
+    <string-array name="pixel_size_entries">
+        <item>低</item>
+        <item>中</item>
+        <item>高</item>
+    </string-array>
+    <string-array name="pixel_size_value">
+        <item>640x480</item>
+        <item>1280x720</item>
+        <item>1920x1080</item>
+    </string-array>
+    <string-array name="scan_mode_value">
+        <item>2</item>
+        <item>0</item>
+    </string-array>
+    <string name="default_focus_mode">auto</string>
+    <string-array name="focus_mode_entries">
+        <item>Auto</item>
+        <item>Infinity</item>
+        <item>Fixed</item>
+        <item>Macro</item>
+        <item>EDOF</item>
+        <item>continuous-picture</item>
+    </string-array>
+    <string-array name="focus_mode_value">
+        <item>auto</item>
+        <item>infinity</item>
+        <item>fixed</item>
+        <item>macro</item>
+        <item>edof</item>
+        <item>continuous-picture</item>
+    </string-array>
+    <bool name="default_focus_forever">true</bool>
+    <bool name="default_scan_effect">false</bool>
+    <bool name="default_save_preview">false</bool>
+    <string name="default_fixed_focus_mode">0</string>
+    <string-array name="fixed_focus_mode">
+        <item>关闭</item>
+        <item>50</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>250</item>
+    </string-array>
+    <string-array name="fixed_focus_value">
+        <item>0</item>
+        <item>50</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>250</item>
+    </string-array>
+    <string name="default_focus_interval">800</string>
+    <string-array name="focus_interval">
+        <item>50</item>
+        <item>300</item>
+        <item>500</item>
+        <item>800</item>
+        <item>1000</item>
+    </string-array>
+    <string-array name="focus_interval_value">
+        <item>50</item>
+        <item>300</item>
+        <item>500</item>
+        <item>800</item>
+        <item>1000</item>
+    </string-array>
+</resources>

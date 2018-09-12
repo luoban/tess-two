@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">條碼掃描</string>
+    <string name="scan_tips">對準二維碼/條碼到框內,即可自動掃描</string>
+    <string name="exposure_config">曝光設置</string>
+    <string name="scan_lib_config">掃碼庫</string>
+    <string name="scan_mode_config">掃碼模式</string>
+    <string name="focus_mode_config">對焦模式</string>
+    <string name="focus_forever">無限對焦</string>
+    <string name="pixel_config">圖像大小</string>
+    <string name="save_preview_config">保存預覽(僅調試)</string>
+    <string name="fixed_focus_mode_config">固定焦距</string>
+    <string name="ums_follow_tip">請按圖示操作</string>
+    <string name="ums_tips">1、將二維碼/條碼對準POS前置攝像頭上方10厘米處進行掃碼\n2、點擊右上角可切換POS後置攝像頭進行掃碼</string>
+    <string name="auto_focus_interval">無限對焦間隔</string>
+    <string name="tap_flashlight">輕觸點亮</string>
+    <string name="tap_close_flashlight">關閉</string>
+    <string name="flashlight_on">打開</string>
+</resources>

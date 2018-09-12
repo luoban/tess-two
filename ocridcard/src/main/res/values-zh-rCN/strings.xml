@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">条码扫描</string>
+    <string name="scan_tips">对准二维码/条码到框内,即可自动扫描</string>
+    <string name="exposure_config">曝光设置</string>
+    <string name="scan_lib_config">扫码库</string>
+    <string name="scan_mode_config">扫码模式</string>
+    <string name="focus_mode_config">对焦模式</string>
+    <string name="focus_forever">无限对焦</string>
+    <string name="front_scan_effect">前置扫码效果</string>
+    <string name="back_scan_effect">后置扫码效果</string>
+    <string name="pixel_config">图像大小</string>
+    <string name="save_preview_config">保存预览(仅调试)</string>
+    <string name="fixed_focus_mode_config">固定焦距</string>
+    <string name="ums_follow_tip">请按图示操作</string>
+    <string name="ums_tips">1、将二维码/条码对准POS前置摄像头上方10厘米处进行扫码\n2、点击右上角可切换POS后置摄像头进行扫描</string>
+    <string name="auto_focus_interval">无限对焦间隔</string>
+    <string name="tap_flashlight">轻触点亮</string>
+    <string name="tap_close_flashlight">关闭</string>
+    <string name="flashlight_on">打开</string>
+</resources>
