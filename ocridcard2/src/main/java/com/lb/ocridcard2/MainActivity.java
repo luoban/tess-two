@@ -15,6 +15,7 @@ import com.baidu.ocr.ui.camera.CameraActivity;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -51,15 +52,13 @@ public class MainActivity extends AppCompatActivity {
             if (data != null) {
                 String contentType = data.getStringExtra(CameraActivity.KEY_CONTENT_TYPE);
                 String filePath = FILE_PATH;
-                Bitmap bmp = BitmapHandler.compressPixel(filePath);
-                String result = OCRManager.get().decode(BitmapHandler.convertImageToGray(bmp));
-                mTipView.setText("解析结果："+result);
-                if (!TextUtils.isEmpty(contentType)) {
-                    if (CameraActivity.CONTENT_TYPE_ID_CARD_FRONT.equals(contentType)) {
-                    } else if (CameraActivity.CONTENT_TYPE_ID_CARD_BACK.equals(contentType)) {
-                    } else if (CameraActivity.CONTENT_TYPE_BANK_CARD.equals(contentType)) {
-                    }
+                try {
+                    IDCardInfo info = new IDCardRecognition(FILE_PATH).recognize();
+                    mTipView.setText(info.toString());
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
+//                mTipView.setText("解析结果："+result);
             }
         }
     }

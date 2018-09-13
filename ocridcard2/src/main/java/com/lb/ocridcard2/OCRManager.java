@@ -1,7 +1,9 @@
 package com.lb.ocridcard2;
 
 import android.graphics.Bitmap;
+import android.graphics.Rect;
 import android.os.Environment;
+import android.support.constraint.solver.widgets.Rectangle;
 
 import com.googlecode.tesseract.android.TessBaseAPI;
 
@@ -46,17 +48,21 @@ public class OCRManager {
     }
 
     public String decode(Bitmap bitmap) {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
         mTess.setImage(bitmap);
+        mTess.setVariable("tessedit_char_whitelist","");
         String result =  mTess.getUTF8Text();
         mTess.clear();
         return result;
-
     }
 
-    public String getWhiteList() {
-        StringBuffer buffer = new StringBuffer();
-        buffer.append("0123456789Xx");
-        buffer.append("姓名性别男女民族汉出生年月日住址");
-        return buffer.toString();
+
+    public String decodeOnlyEng(Bitmap bitmap) {
+        mTess.setImage(bitmap);
+        mTess.setVariable("tessedit_char_whitelist","0123456789Xx");
+        String result =  mTess.getUTF8Text();
+        mTess.clear();
+        return result;
     }
 }
