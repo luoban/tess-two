@@ -21,7 +21,7 @@ public class IDCardRecognition {
     private Bitmap bitmap;
     private int mWidth;
     private int mHeight;
-
+    private IDCardInfo mInfo;
     public IDCardRecognition(String bmpPath) throws IOException {
         mBmpPath = bmpPath;
         Bitmap bmp = BitmapHandler.compressPixel(mBmpPath);
@@ -29,17 +29,17 @@ public class IDCardRecognition {
             throw new IOException("no pic found");
         }
         bitmap = BitmapHandler.convertImageToGray(bmp);
-        BitmapHandler.save(bitmap,TMP_PIC);
+        mInfo = new IDCardInfo();
+        mInfo.setBitmap(bitmap);
         mWidth = bitmap.getWidth();
         mHeight = bitmap.getHeight();
     }
 
     public IDCardInfo recognize() {
         //身份证号
-        IDCardInfo info = new IDCardInfo();
         Bitmap bmp = findIDNumRegion();
         String id = OCRManager.get().decodeOnlyEng(bmp);
-        info.setId(id);
+        mInfo.setId(id);
         bmp = Bitmap.createBitmap(bitmap, 30, 40, mWidth - mWidth / 3 -40,mHeight -  bmp.getHeight() -40);
         String textResult = OCRManager.get().decode(bmp);
         String[] texts = textResult.split("\n");
@@ -54,7 +54,7 @@ public class IDCardRecognition {
                     index = t.indexOf("姓") + 3;
                 }
                 if (index != -1) {
-                    info.setName(t.substring(index));
+                    mInfo.setName(t.substring(index));
                 }
             } else if (t.contains("性") || t.contains("别")) {
                 int index = -1;
@@ -64,7 +64,7 @@ public class IDCardRecognition {
                     index = t.indexOf("性") + 3;
                 }
                 if (index != -1) {
-                    info.setSex(t.substring(index, index + 2));
+                    mInfo.setSex(t.substring(index, index + 2));
                 }
             } else if (t.contains("出") || t.contains("生") || t.contains("日")) {
                 int index = -1;
@@ -76,18 +76,20 @@ public class IDCardRecognition {
                     index = t.indexOf("出") + 3;
                     endIndex = t.indexOf("日");
                 }
-                String birth = "";
-                if (endIndex != -1) {
-                    birth = t.substring(index, endIndex);
-                } else {
-                    endIndex = t.indexOf(" ", index);
+                if (index != -1) {
+                    String birth = "";
                     if (endIndex != -1) {
                         birth = t.substring(index, endIndex);
                     } else {
-                        birth = t.substring(index);
+                        endIndex = t.indexOf(" ", index);
+                        if (endIndex != -1) {
+                            birth = t.substring(index, endIndex);
+                        } else {
+                            birth = t.substring(index);
+                        }
                     }
+                    mInfo.setBirth(birth);
                 }
-                info.setBirth(birth);
             } else if (t.contains("址")) {
                 String addr = "";
                 int index = t.indexOf("址") + 1;
@@ -98,12 +100,12 @@ public class IDCardRecognition {
                     addr = t.substring(index, end);
                 }
                 addr += texts[i + 1];
-                info.setAddress(addr);
+                mInfo.setAddress(addr);
             }
-            info.setMz("汉");
+            mInfo.setMz("汉");
         }
 
-        return info;
+        return mInfo;
     }
 
     private Bitmap findIDNumRegion() {

@@ -1,5 +1,7 @@
 package com.lb.ocridcard2;
 
+import android.graphics.Bitmap;
+
 /**
  * @auth luoban <luoban@centerm.com>
  * @date 18-9-13.上午9:39
@@ -12,7 +14,7 @@ public class IDCardInfo {
     private String birth = "";
     private String address = "";
     private String id = "";
-
+    private Bitmap bitmap;
     public String getName() {
         return name;
     }
@@ -59,6 +61,14 @@ public class IDCardInfo {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public Bitmap getBitmap() {
+        return bitmap;
+    }
+
+    public void setBitmap(Bitmap bitmap) {
+        this.bitmap = bitmap;
     }
 
     @Override
